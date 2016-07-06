@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "firebase": "ember-cap-game",
+    "public": "dist",
+    "rewrites": [{
+      "source": "**",
+      "destination": "/index.html"
+    }]
+  }
+}
