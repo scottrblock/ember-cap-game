@@ -1,6 +1,17 @@
 @import "bootstrap";
 @import "theme";
 
+h3{
+  margin: 0 0 5px 0;
+}
+
+h1#title{
+  margin: 0;
+  line-height: 100%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
 .player-list{
   padding-left: 0;
 }
@@ -29,20 +40,43 @@
   }
 }
 
+@media (min-width: 768px) {
+
+  h1#title{
+    margin-top: 20px;
+  }
+  
+  .current-roster{
+    position: fixed;
+    left: 50%;
+    width: 50%;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+
+  .roster-well{
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #994FC2;
+    color: #fff;
+  }
+}
+
 .current-roster{
   position: fixed;
-  left: 50%;
-  width: 50%;
-  padding-right: 50px;
-  padding-left: 50px;
+  left: 47%;
+  width: 47%;
+  top: 25%;
 }
 
 .roster-well{
-  margin-bottom: 10px;
-  padding: 10px 20px;
+  margin-bottom: 5px;
+  padding: 4px 8px;
   background-color: #994FC2;
   color: #fff;
 }
+
 
 .m-b-30{
   margin-bottom: 30px;
