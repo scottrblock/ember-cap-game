@@ -1,0 +1,29 @@
+<h1 id="title">Welcome to the Cap Game</h1>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="alert top-intro">
+      Click a player to add or remove a player to your roster. You can't spend more than $15. Newly created players cost $1 (don't cheat).
+      <br><br>
+      Once you've successfully created a roster of 5 players for under $15 you can name it, publish it, and share it with your friends 💫🏀
+    </div>
+  </div>
+</div>
+{{player-list players=model newRoster='newRoster'}}
+
+
+<div class="row">
+  <div class="col-xs-6 m-b-30">
+    <h2>New Player</h2>
+
+    <div class="form-group">
+      {{input value=firstName placeholder="J.R." class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      {{input value=lastName placeholder="Smith" class="form-control"}}
+    </div>
+
+    <button {{action "createPlayer" firstName lastName price}} class="btn btn-primary">Add</button>
+  </div>
+</div>

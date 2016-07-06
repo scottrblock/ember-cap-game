@@ -1,0 +1,19 @@
+<h1 id="title">Viewing <strong>{{model.roster.name}}</strong></h1>
+
+
+{{#each model.roster.players as |player|}}
+  <div class="well">
+    {{player.fullName}}
+    {{player.formattedPrice}}
+  </div>
+{{/each}}
+
+
+<div class="m-b-30">
+  {{twitter-share}}
+</div>
+
+<a href="/" class="btn btn-success">
+  Back to home page
+</a>
+

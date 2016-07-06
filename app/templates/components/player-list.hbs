@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-xs-6">
+    <h2>Available Players</h2>
+    <ul class="player-list">
+      {{#each players as |player|}}
+        <li class="player-list-item selected-{{player.selected}}" {{action "toggleSelected" player}}>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="pull-left">
+                {{player.fullName}}
+              </div>
+              <div class="pull-right">
+                {{player.formattedPrice}}
+              </div>
+            </div>
+          </div>
+        </li>
+      {{/each}}
+
+    </ul>
+  </div>
+
+  <div class="col-xs-6">
+    <div class="current-roster">
+        <h2>Current Roster</h2>
+        {{#if roster}}
+          <h3>Total Price ${{rosterPrice}}</h3>
+        {{else}}
+          <div class="alert alert-info">
+            Click a player to get started!
+          </div>
+        {{/if}}
+        {{#each roster as |player|}}
+          <div class="well roster-well">
+            {{player.fullName}}
+            {{player.formattedPrice}}
+          </div>
+
+        {{/each}}
+
+
+        {{#if validRoster}}
+          <div class="form-group">
+            <label for="newRosterName" class="control-label">Roster Name</label>
+            {{input id="newRosterName" value=newRosterName placeholder="Super Team Name" class="form-control"}}
+          </div>
+          
+          <button class="btn btn-success btn-lg btn-block" {{action "publishTeam"}}>Click to Publish Team</button>
+        {{/if}}
+      </div>
+    </div>
+</div>

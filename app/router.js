@@ -6,6 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('players', { path:'/' });
+  this.route('rosters', { path:'/roster/:roster_id' });
+
 });
 
 export default Router;

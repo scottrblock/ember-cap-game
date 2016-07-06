@@ -2,6 +2,13 @@
 
 module.exports = function(environment) {
   var ENV = {
+    firebase: {
+      apiKey: 'AIzaSyB4QrCE2Wd5hshC32qJwvMRJMfpBB0kdR0',
+      authDomain: 'cap-game.firebaseapp.com',
+      databaseURL: 'https://cap-game.firebaseio.com',
+      storageBucket: 'cap-game.appspot.com',
+    },
+
     modulePrefix: 'ember-cap-game',
     environment: environment,
     baseURL: '/',
